@@ -66,6 +66,7 @@ function renderTask() {
         input.value = currentTask;
         input.focus()
         editingIndex = index;
+        addBtn.textContent = "Update"
 
         //   let newtask = prompt("edit your task", currentTask);
         //   if(!newtask || newtask.trim() === ""){
@@ -103,9 +104,11 @@ addBtn.addEventListener("click", () => {
   }else{
     data[editingIndex].text = input.value.trim()
     editingIndex = null
+    addBtn.textContent = "Add"
   }
 
   localStorage.setItem("data", JSON.stringify(data));
   input.value = "";
   renderTask();
 });
+
