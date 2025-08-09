@@ -2,10 +2,6 @@ const addTaskWrapper = document.querySelector("#addTaskWrapper");
 const input = document.querySelector("#taskInput");
 const addBtn = document.querySelector("#addTask");
 const taskList = document.querySelector("#taskList");
-// const editTaskContainer = document.querySelector("#editTaskWrapper")
-// const editInput = document.querySelector("#editInput")
-// const updateBtn = document.querySelector(".update")
-// const cancelBtn = document.querySelector("#cancel")
 
 let data = JSON.parse(localStorage.getItem("data")) || [];
 let editingIndex = null;
@@ -65,8 +61,6 @@ function renderTask() {
       }
 
       if (e.target.classList.contains("edit")) {
-        // editTaskContainer.classList.toggle("hidden")
-        // let cancelBtn = document.createElement("button")
         let index = Number(e.target.dataset.index);
         let currentTask = data[index].text;
         input.value = currentTask;
@@ -80,7 +74,7 @@ function renderTask() {
         // }
         //   data[index].text = newtask;
         //   localStorage.setItem("data", JSON.stringify(data));
-        renderTask();
+        // renderTask();
       }
 
       if (e.target.classList.contains("done")) {
@@ -88,7 +82,6 @@ function renderTask() {
         data[index].completed = !data[index].completed;
         localStorage.setItem("data", JSON.stringify(data));
         renderTask();
-        //continue working heref
       }
     });
   });
