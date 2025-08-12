@@ -92,26 +92,26 @@ renderTask();
 
 input.addEventListener("keydown", function (event) {
   if (event.key === "Enter") {
-  if (input.value.trim() === "") {
-    alert("enter a task");
-    return;
-  }
+    if (input.value.trim() === "") {
+      alert("enter a task");
+      return;
+    }
 
-  if (editingIndex === null) {
-    data.push({
-      text: input.value.trim(),
-      completed: false,
-    });
-  }else{
-    data[editingIndex].text = input.value.trim()
-    editingIndex = null
-    addBtn.textContent = "Add"
-  }
+    if (editingIndex === null) {
+      data.push({
+        text: input.value.trim(),
+        completed: false,
+      });
+    }else{
+      data[editingIndex].text = input.value.trim()
+      editingIndex = null
+      addBtn.textContent = "Add"
+    }
 
-  localStorage.setItem("data", JSON.stringify(data));
-  input.value = "";
-  renderTask();
-  }
+    localStorage.setItem("data", JSON.stringify(data));
+    input.value = "";
+    renderTask();
+    }
 });
 
 addBtn.addEventListener("click", () => {
@@ -135,6 +135,7 @@ addBtn.addEventListener("click", () => {
   input.value = "";
   renderTask();
 });
+
 
 
 
