@@ -27,7 +27,6 @@ async function checkWeather(cityName) {
     return;
   }
   var data = await response.json();
-  console.log(data);
   city.textContent = data.name;
   temp.textContent = Math.round(data.main.temp) + "°C";
   humidity.textContent = data.main.humidity + "%";
@@ -71,4 +70,5 @@ searchBox.addEventListener("keydown", function (event) {
 
 closePopup.addEventListener('click',()=>{
   errorMsg.classList.remove("popup-error")
+
 })
