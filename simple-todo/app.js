@@ -90,7 +90,7 @@ function renderTask() {
 
 renderTask();
 
-searchBox.addEventListener("keydown", function (event) {
+input.addEventListener("keydown", function (event) {
   if (event.key === "Enter") {
   if (input.value.trim() === "") {
     alert("enter a task");
@@ -135,5 +135,6 @@ addBtn.addEventListener("click", () => {
   input.value = "";
   renderTask();
 });
+
 
 
