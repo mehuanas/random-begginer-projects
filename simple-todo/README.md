@@ -31,6 +31,6 @@ It allows users to add, edit, delete, and store tasks in their browser's **Local
 
 ## Live Demo
 
-[View on Vercel](https://to-do-psi-weld.vercel.app/)
+[Live preview](https://to-do-psi-weld.vercel.app/)
 
 ---
