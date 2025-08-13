@@ -3,8 +3,6 @@
 This repository contains various beginner-level JavaScript projects that I created to practice and improve my coding skills.  
 Each project is standalone and focuses on implementing core JavaScript concepts along with HTML and CSS.  
 
----
-
 ## Purpose
 The goal of this repository is to build small projects regularly to strengthen my JavaScript skills, explore new features, and experiment with different design approaches.
 
