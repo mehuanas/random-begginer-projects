@@ -5,9 +5,14 @@ const taskInput = document.querySelector("#taskInput");
 const addBtn = document.querySelector("#addBtn");
 const tasksContainer = document.querySelector(".tasks");
 
-let tasks = JSON.parse(localStorage.getItem("taskData")) || [];
 let editingIndex = null;
+const STORAGE_KEY = "taskData";
 
+let tasks = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+
+function saveTask() {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(tasks));
+}
 document.body.addEventListener("keydown", (e) => {
   if (e.shiftKey && e.key.toLocaleLowerCase() === "n") {
     e.preventDefault();
@@ -23,24 +28,25 @@ newTaskBtn.addEventListener("click", () => {
   taskInput.focus();
 });
 closeBtn.addEventListener("click", () => {
-    inputContainer.classList.toggle("input-toggle");
+  inputContainer.classList.toggle("input-toggle");
 });
 
 function render() {
   let clutter = tasks.map((task, index) => {
     let status;
-    let icon;
     task.completed ? (status = "completed") : (status = "pending");
-    task.completed
-      ? (icon = `<i data-index="${index}" class="bi bi-arrow-counterclockwise task-done"></i>`)
-      : (icon = `<i data-index="${index}" class="bi bi-check-circle-fill task-done"></i>`);
+
     return `<div class="task">
             <div class="text">
               <p class="task-text ${status}">${task.text}</p>
             </div>
 
             <div class="task-actions">
-              ${icon}
+              ${
+                task.completed
+                  ? (icon = `<i data-index="${index}" class="bi bi-arrow-counterclockwise task-done"></i>`)
+                  : (icon = `<i data-index="${index}" class="bi bi-check-circle-fill task-done"></i>`)
+              }
               <i data-index="${index}" class="bi bi-pencil-square edit-btn"></i>
               <i data-index="${index}" class="bi bi-file-earmark-x-fill delete-btn"></i>
             </div>
@@ -51,10 +57,6 @@ function render() {
 }
 
 render();
-
-function saveTask() {
-  localStorage.setItem("taskData", JSON.stringify(tasks));
-}
 
 taskInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
@@ -93,7 +95,7 @@ addBtn.addEventListener("click", () => {
     saveTask();
     editingIndex = null;
   }
-  localStorage.setItem("taskData", JSON.stringify(tasks));
+  saveTask();
   render();
   taskInput.value = "";
   inputContainer.classList.toggle("input-toggle");
