@@ -36,3 +36,5 @@ It allows you to add, edit, mark as complete/incomplete, and delete tasks — wi
 - **JavaScript (ES6)** — functionality & DOM manipulation
 - **localStorage** — persistent data storage
 - **Bootstrap Icons** — task action icons
+
+[Live preview](https://todo-app-lake-one-75.vercel.app/)
