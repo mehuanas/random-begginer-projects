@@ -5,6 +5,11 @@ Each project is standalone and focuses on implementing core JavaScript concepts 
 
 ---
 
+## Purpose
+The goal of this repository is to build small projects regularly to strengthen my JavaScript skills, explore new features, and experiment with different design approaches.
+
+---
+
 ## Projects
 
 ### Todo App (Current Version)
@@ -15,8 +20,3 @@ Each project is standalone and focuses on implementing core JavaScript concepts 
 
 ### Weather App
 [Live Preview](https://weather-app-nine-theta-13.vercel.app/)
-
----
-
-## Purpose
-The goal of this repository is to build small projects regularly to strengthen my JavaScript skills, explore new features, and experiment with different design approaches.
