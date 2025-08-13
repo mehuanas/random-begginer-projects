@@ -11,13 +11,13 @@ The goal of this repository is to build small projects regularly to strengthen m
 ## Projects
 
 ### Todo App (Current Version)
-[Live Preview](https://todo-app-lake-one-75.vercel.app/todo/)
-[Know more...](https://github.com/mehuanas/random-js-projects/todo/)
+[Live Preview](https://todo-app-lake-one-75.vercel.app/todo/)  
+[Know more...](https://github.com/mehuanas/random-js-projects/tree/main/todo)
 
 ### Simple Todo App
-[Live Preview](https://to-do-psi-weld.vercel.app/)
-[Know more...](https://github.com/mehuanas/random-js-projects/simple-todo/)
+[Live Preview](https://to-do-psi-weld.vercel.app/)  
+[Know more...](https://github.com/mehuanas/random-js-projects/tree/main/simple-todo)
 
 ### Weather App
-[Live Preview](https://weather-app-nine-theta-13.vercel.app/)
-[Know more...](https://github.com/mehuanas/random-js-projects/weather-app/)
+[Live Preview](https://weather-app-nine-theta-13.vercel.app/)  
+[Know more...](https://github.com/mehuanas/random-js-projects/tree/main/weather-app)
