@@ -33,6 +33,7 @@ closeBtn.addEventListener("click", () => {
 }else{
     taskInput.value = ""
     editingIndex = null
+    inputContainer.classList.toggle("input-toggle");
   }
 });
 
@@ -128,6 +129,7 @@ tasksContainer.addEventListener("click", (e) => {
     render();
   }
 });
+
 
 
 
