@@ -34,7 +34,7 @@ closeBtn.addEventListener("click", () => {
     taskInput.value = ""
     editingIndex = null
   }
-);
+});
 
 function render() {
   let clutter = tasks.map((task, index) => {
@@ -128,5 +128,6 @@ tasksContainer.addEventListener("click", (e) => {
     render();
   }
 });
+
 
 
