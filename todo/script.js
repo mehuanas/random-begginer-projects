@@ -28,8 +28,12 @@ newTaskBtn.addEventListener("click", () => {
   taskInput.focus();
 });
 closeBtn.addEventListener("click", () => {
-  inputContainer.classList.toggle("input-toggle");
-});
+  if(editingIndex === null){
+    inputContainer.classList.toggle("input-toggle");
+}else{
+    taskInput.value = ""
+    editingIndex = null
+  );
 
 function render() {
   let clutter = tasks.map((task, index) => {
@@ -123,3 +127,4 @@ tasksContainer.addEventListener("click", (e) => {
     render();
   }
 });
+
