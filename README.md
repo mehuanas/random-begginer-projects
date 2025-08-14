@@ -11,7 +11,7 @@ The goal of this repository is to build small projects regularly to strengthen m
 ## Projects
 
 ### Todo App (Current Version)
-[Live Preview](https://todo-app-lake-one-75.vercel.app/todo/)  
+[Live Preview](https://todo-app-lake-one-75.vercel.app/)  
 [Know more](https://github.com/mehuanas/random-js-projects/tree/main/todo)
 
 ### Simple Todo App
